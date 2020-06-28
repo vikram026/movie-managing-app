@@ -27,7 +27,7 @@ public class MovieController {
         log.info("into controller  method");
         ResponseDTO response = movieService.getOptimalMovies(movies);
         if (response != null)
-            return new ResponseEntity<>(response, HttpStatus.CREATED);
+            return new ResponseEntity<>(response, HttpStatus.OK);
         else
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
