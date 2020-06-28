@@ -17,11 +17,6 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping
-    public String test(){
-        return "tested";
-    }
-
     @PostMapping
     public ResponseEntity<ResponseDTO> getOptimalMovies(@RequestBody Movies movies) {
         log.info("into controller  method");
